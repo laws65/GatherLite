@@ -187,7 +187,7 @@ shared class CTFSpawns : RespawnSystem
 		{
 			CBlob@ pickSpawn = getBlobByNetworkID(c_info.spawn_point);
 			if (pickSpawn !is null &&
-			        pickSpawn.hasTag("respawn") && !isUnderRaid(pickSpawn) &&
+			        pickSpawn.hasTag("respawn") && !pickSpawn.hasTag("under raid") &&
 			        pickSpawn.getTeamNum() == p_info.team)
 			{
 				return pickSpawn.getPosition();
